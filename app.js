@@ -1,151 +1,128 @@
 console.log("Hello World!\n==========\n");
-console.log(
-  "Follow the steps in the README.md file to complete the exercises:\n==========\n"
-);
-// Exercise 1 //
+console.log("Exercise #1:\n==========\n");
+  faveNum=7;
+  let min= 1;
+  let max= 10;
+    let answer= prompt(`Guess a number from ${min}-${max} `);
+    parseInt(answer);
+    if (isNaN(answer)|| answer> max||answer<min){
+   console.log("out of range guess");
+       }
 
-let min = 1;
-let max = 100; 
-let numToGuess = 33;
-
-let input =  prompt(`Guess a whole number betwen ${min} and ${max}`); 
-
-if (input > max / input < min) { 
-  alert(
-    `Your guess was not a whole number between $(min) and $(max). 
-     Try again.`)
-  
-} else {
-  if (numToGuess > input) {
-    alert("too low");
-  } else if (numToGuess < input) {
-    alert("too high");
-  } else {
-    alert("correct");
-  }
- }
-  
-
-
-
-
-let favNumber = 7
-let input2 = alert("What is your favorite number?")
-
-if (input2<favNumber) {
-  console.log("TooLow");
-} 
-  if (input2>favNumber) {
-    console.log("TooHigh");
-    }
- if (input2 == (favNumber)) {
-  console.log("Congratulations!");
- }
-  
-
-
-// Exercise 2 //
-
-let birthMonth = prompt(
-  "Enter your birth month: \n Format Examples: ('January, July, December')"
-);
-
-birthMonth = birthMonth.toLowerCase(); 
-
-switch (birthMonth) {
-  case "december":
-  case "january":
-  case "february":
-    alert("Winter");
-    break;
-  case "march": 
-  case "april":
-  case "may":
-    alert("Spring");
-    break;
-  case "june":
-  case "july":
-  case "august":
-    alert ("Summer");
-    break;
-  case "september":
-  case "october":
-  case "november":
-    alert ("Fall");
-    break;
-  default:
-    alert(
-      "Not a valid month. Check the spelling for the entire month name and try again."
-    ); 
+ else if(answer <faveNum){
+console.log("You have guessed too low");
+}
+else if (answer>faveNum)
+{
+  console.log("You have guessed too high ");
+}
+else{
+  console.log("Lucky you! You have guessed correctly.");
 }
 
-    
+console.log("Exercise #2:\n==========\n");
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-let birthMonth2 = window.prompt("What is your birth month number?\n (ex: January = 1")
-birthMonth2 = parseInt(birthMonth2);
-switch((birthMonth)) {
-  case 1: 
+birthMonth=prompt("What is your birth month number 1-12?");
+birthMonth=parseInt(birthMonth);
+switch(birthMonth){
+  case 12:
+  case 1:
   case 2:
-  case 3:
-    console.log("Your birth month is in Winter");
-    break;
+        console.log("Your birth month in Winter"); 
+        break;
 
+  case 3:
   case 4:
   case 5:
-  case 6:
-    console.log("Your birth month is in Spring");
-    break;
+        console.log("Your birth month is in Spring"); 
+        break;
 
+  case 6:
   case 7:
   case 8:
-  case 9:
-    console.log("Your birth month is in Summer");
-    break;
+        console.log("Your birth month is in Summer"); 
+        break;
 
+  case 9:
   case 10:
   case 11:
-  case 12:
-    console.log("Your birth month is in Fall");
-    break;
+        console.log("Your birth month is in Autumm"); 
+        break;
+ default: 
+ console.log("Your birth month falls outside of the Gregorian calendar");
+}
+
+
+console.log("Exercise #3:\n==========\n");
+
+
+let typeId = "01";
+let colorId = "PU";
+let sizeId = "L";
+
+let type = "";
+let color = "";
+let size = "";
+
+switch(typeId)
+{
+  case "01":
+            type="Tank top";
+        break;    
+
+  case "02":
+              type = "T-Shirt";
+         break;     
+   case "03": 
+              type = "Long Sleeve";
+              break;  
+    case "04":
+             type == "Sweat Shirt";
+             break;  
     default:
-      console.log("Your month doesn't fall in the Gregorian calendar.");
+              type = "Other";            
 }
 
-let birthMonth3 = prompt("What is your birth month number?")
-birthMonth3 = birthMonth.number 
+switch(colorId){
+  case "BL": 
+    color = "Black";
+    break;
+  case "BL":
+    color = "Blue";
+    break;
+  case "RD": 
+    color = "Red";
+    break;
+  case"PU":
+    color = "Purple";
+    break;
+   default:
+    color = "White";
 
-if (monthNum == 12 || monthNum == 1 || monthNum == 2) {
-  console.log("Winter");
-} else if (monthNum == 3 || monthNum == 4 || monthNum == 5) {
-  console.log("Spring");
-} else if (monthNum == 6 || monthNum == 7 || monthNum == 8) {
-  console.log("Summer");
-} else if (monthNum == 9 || monthNum == 10 || monthNum == 11) {
-  console.log("Fall"); 
-} else {
-  console.log("Your month doesn't fall in the Gregorian Calendar.");
 }
- 
+
+
+switch(sizeId){
+  case "S":
+  size = "Small";
+  break;
+case "M":
+  size = "Medium";
+  break;
+
+case "L":
+  size = "Large";
+ break;
+case "XL":
+  size = "Extra Large";
+break;
+default:
+  size = "One Size Fits All";
+}
+
+
+
+
+
+console.log(`Product: ${size} ${color} ${type}`);
