@@ -47,7 +47,7 @@ switch(birthMonth){
   case 9:
   case 10:
   case 11:
-        console.log("Your birth month is in Autumm"); 
+        console.log("Your birth month is in Autumn"); 
         break;
  default: 
  console.log("Your birth month falls outside of the Gregorian calendar");
